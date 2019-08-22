@@ -227,6 +227,7 @@ class AstVisitor(SolidityVisitor):
         return Node(ctx=ctx,
                     type="Parameter",
                     name=name,
+                    typeName=self.visit(ctx.typeName()),
                     storageLocation=storageLocation,
                     isStateVar=False,
                     isIndexed=False
